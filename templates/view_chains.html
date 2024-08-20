@@ -1,0 +1,128 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Blockchain Visualization</title>  
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  
+    <style>  
+        /* General Reset */  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            font-family: Arial, sans-serif;  
+        }  
+
+        /* Body Style */  
+        body {  
+            background-color: #f4f4f4;  
+            color: #333;  
+            line-height: 1.6;  
+            margin: 20px;  
+        }  
+
+        /* Header Section */  
+        header {  
+            background-color: #4CAF50;  
+            color: white;  
+            padding: 10px 0;  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+
+        header h1 {  
+            font-size: 2.5rem;  
+            font-weight: bold;  
+        }  
+
+        /* Chains Container */  
+        .chains-container {  
+            background-color: #ffffff;  
+            padding: 20px;  
+            border-radius: 8px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+            width: 90%;  
+            margin: 0 auto;  
+        }  
+
+        /* Table Styles */  
+        table {  
+            width: 100%;  
+            border-collapse: collapse;  
+            margin-bottom: 20px;  
+        }  
+
+        th, td {  
+            padding: 12px;  
+            border: 1px solid #dee2e6;  
+            text-align: left;  
+        }  
+
+        th {  
+            background-color: #4CAF50;  
+            color: #fff;  
+        }  
+
+        tr:nth-child(even) {  
+            background-color: #f2f2f2;  
+        }  
+
+        tr:hover {  
+            background-color: #ddd;  
+        }  
+
+        /* Footer Section */  
+        footer {  
+            background-color: #4CAF50;  
+            color: white;  
+            text-align: center;  
+            padding: 10px 0;  
+            border-radius: 8px;  
+            margin-top: 20px;  
+        }  
+
+        footer p {  
+            font-size: 1rem;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Header Section -->  
+    <header>  
+        <h1>Blockchain Data Visualization</h1>  
+    </header>  
+
+    <!-- Chains Table Section -->  
+    <section class="chains-container">  
+        <h2>Blockchain Chains</h2> <!-- Optional heading for clarity -->  
+        <table>  
+            <thead>  
+                <tr>  
+                    <th>Customer ID</th>  
+                    <th>Previous Hash</th>  
+                    <th>Data</th>  
+                    <th>Timestamp</th>  
+                    <th>Nonce</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+                {% for block in blockchain %}  
+                <tr>  
+                    <td>{{ block['id'] }}</td>  
+                    <td>{{ block['previous_hash'] }}</td>  
+                    <td>{{ block['data'] }}</td>  
+                    <td>{{ block['timestamp'] }}</td>  
+                    <td>{{ block['nonce'] }}</td>  
+                </tr>  
+                {% endfor %}  
+            </tbody>  
+        </table>  
+    </section>  
+
+    <!-- Footer Section -->  
+    <footer>  
+        <p>&copy; 2024 Insurance Claims Processing Portal. All rights reserved.</p>  
+    </footer>  
+</body>  
+</html>

@@ -1,0 +1,30 @@
+<!-- example template: view_client_chains.html -->  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Client Chains</title>  
+</head>  
+<body>  
+    <h1>Chains for Client ID: {{ client_id }}</h1>  
+    <table border="1">  
+        <tr>  
+            <th>Index</th>  
+            <th>Previous Hash</th>  
+            <th>Proof</th>  
+            <th>Timestamp</th>  
+            <th>Transactions</th>  
+        </tr>  
+        {% for block in blockchain %}  
+            <tr>  
+                <td>{{ block.index }}</td>  
+                <td>{{ block.previous_hash }}</td>  
+                <td>{{ block.proof }}</td>  
+                <td>{{ block.timestamp }}</td>  
+                <td>{{ block.transactions }}</td>  
+            </tr>  
+        {% endfor %}  
+    </table>  
+    <a href="/">Back to Home</a>  
+</body>  
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Claims</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .claims-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+
+        th {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td {
+            font-size: 14px;
+            color: #343a40;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Submitted Insurance Claims</h1>
+    </header>
+
+    <!-- Claims Table Section -->
+    <section class="claims-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Months as Customer</th>
+                    <th>Age</th>
+                    <th>Policy State</th>
+                    <th>Policy CSL</th>
+                    <th>Policy Deductible</th>
+                    <th>Policy Annual Premium</th>
+                    <th>Umbrella Limit</th>
+                    <th>Insured Sex</th>
+                    <th>Insured Education Level</th>
+                    <th>Insured Occupation</th>
+                    <th>Insured Hobbies</th>
+                    <th>Capital Gains</th>
+                    <th>Capital Loss</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for claim in claims %}
+                <tr>
+                    <td>{{ claim[0] }}</td>
+                    <td>{{ claim[1] }}</td>
+                    <td>{{ claim[2] }}</td>
+                    <td>{{ claim[3] }}</td>
+                    <td>{{ claim[4] }}</td>
+                    <td>{{ claim[5] }}</td>
+                    <td>{{ claim[6] }}</td>
+                    <td>{{ claim[7] }}</td>
+                    <td>{{ claim[8] }}</td>
+                    <td>{{ claim[9] }}</td>
+                    <td>{{ claim[10] }}</td>
+                    <td>{{ claim[11] }}</td>
+                    <td>{{ claim[12] }}</td>
+                    <td>{{ claim[13] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Insurance Claims Processing Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

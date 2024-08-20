@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claims Processing Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Insurance Claims Processing Portal</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <p>Welcome to the Insurance Claims Processing Portal, your dedicated online platform designed to streamline and simplify the claims submission process. Here, policyholders can easily submit their claims, track their status, and access essential resources, ensuring a seamless experience from start to finish. Our user-friendly interface and comprehensive support empower you to manage your insurance needs efficiently, providing peace of mind during what can often be a challenging time.</p>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-container">
+        <h2>Insurance Claim Information</h2>
+        <form method="POST" action="/submit-claim">
+            <!-- Customer Information -->
+            <fieldset>
+                <legend>Customer Information</legend>
+                <div class="form-group">
+                    <label for="months_as_customer">Months as Customer:</label>
+                    <input type="number" id="months_as_customer" name="months_as_customer" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+            </fieldset>
+
+            <!-- Policy Information -->
+            <fieldset>
+                <legend>Policy Information</legend>
+                <div class="form-group">
+                    <label for="policy_state">Policy State:</label>
+                    <select id="policy_state" name="policy_state" required>
+                        {% for state in policy_states %}
+                        <option value="{{ state }}">{{ state }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="policy_csl">Policy CSL:</label>
+                    <select id="policy_csl" name="policy_csl" required>
+                        {% for csl in policy_csls %}
+                        <option value="{{ csl }}">{{ csl }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="policy_deductable">Policy Deductible:</label>
+                    <input type="number" id="policy_deductable" name="policy_deductable" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="policy_annual_premium">Policy Annual Premium:</label>
+                    <input type="number" id="policy_annual_premium" name="policy_annual_premium" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="umbrella_limit">Umbrella Limit:</label>
+                    <input type="number" id="umbrella_limit" name="umbrella_limit" required>
+                </div>
+            </fieldset>
+
+            <!-- Insured Information -->
+            <fieldset>
+                <legend>Insured Information</legend>
+                <div class="form-group">
+                    <label for="insured_sex">Insured Sex:</label>
+                    <select id="insured_sex" name="insured_sex" required>
+                        {% for sex in insured_sexes %}
+                        <option value="{{ sex }}">{{ sex }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="insured_education_level">Insured Education Level:</label>
+                    <select id="insured_education_level" name="insured_education_level" required>
+                        {% for education_level in insured_education_levels %}
+                        <option value="{{ education_level }}">{{ education_level }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="insured_occupation">Insured Occupation:</label>
+                    <select id="insured_occupation" name="insured_occupation" required>
+                        {% for occupation in insured_occupations %}
+                        <option value="{{ occupation }}">{{ occupation }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="insured_hobbies">Insured Hobbies:</label>
+                    <select id="insured_hobbies" name="insured_hobbies" required>
+                        {% for hobby in insured_hobbies %}
+                        <option value="{{ hobby }}">{{ hobby }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Financial Information -->
+            <fieldset>
+                <legend>Financial Information</legend>
+                <div class="form-group">
+                    <label for="capital_gains">Capital Gains:</label>
+                    <input type="number" id="capital_gains" name="capital_gains" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="capital_loss">Capital Loss:</label>
+                    <input type="number" id="capital_loss" name="capital_loss" required>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Insurance Claims Processing Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "index":1,
+        "previous_hash":"1",
+        "proof":100,
+        "timestamp":1724168610.0307655334,
+        "transactions":"[]"
+    },
+    {
+        "index":2,
+        "previous_hash":"04bef1825f1b67992c3488483a1f216fdda07b656cd7896aa16011bc6bd31472",
+        "proof":35293,
+        "timestamp":1724168626.6811029911,
+        "transactions":"[{'months_as_customer': '45', 'age': '70', 'policy_state': 'TX', 'policy_csl': '500\/1000', 'policy_deductable': '8000', 'policy_annual_premium': '700', 'umbrella_limit': '9000', 'insured_sex': 'Male', 'insured_education_level': 'Masters', 'insured_occupation': 'Doctor', 'insured_hobbies': 'Traveling', 'capital_gains': '8000', 'capital_loss': '8000'}]"
+    },
+    {
+        "index":3,
+        "previous_hash":"ae7d778a0ebdb97c9665e5b319e2ed6e65caa8f3accff91ad7e5c3880cd8ec94",
+        "proof":35089,
+        "timestamp":1724168807.1496777534,
+        "transactions":"[{'months_as_customer': '900', 'age': '900', 'policy_state': 'NY', 'policy_csl': '250\/500', 'policy_deductable': '900', 'policy_annual_premium': '800', 'umbrella_limit': '8000', 'insured_sex': 'Male', 'insured_education_level': 'Masters', 'insured_occupation': 'Doctor', 'insured_hobbies': 'Traveling', 'capital_gains': '800', 'capital_loss': '9000'}]"
+    }
+]

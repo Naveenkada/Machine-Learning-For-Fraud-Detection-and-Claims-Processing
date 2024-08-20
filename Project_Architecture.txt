@@ -1,0 +1,11 @@
+fraud_detection/
+│
+├── blockchain/
+│   ├── blockchain.py
+│   └── smart_contract.sol
+├── static/
+│   └── styles.css
+├── templates/
+│   └── form.html
+├── app.py
+└── requirements.txt
