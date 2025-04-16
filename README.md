@@ -28,8 +28,8 @@ With the utilization of Blockchain technology and machine learning techniques fo
 
 
 ### Project Questions :
-1.	Can fraudulent transaction be predicted before they occur. 
-2.	How can machine learning approaches be employed to secure claim processes in insurances.
+1.	Can fraudulent transaction be predicted before they occur? 
+2.	How can machine learning approaches be employed to secure claim processes in insurances?
 3.	To what extent can blockchain technology be considered secured for secure claim processes and financials in insurance?
 4.	What are the best approaches to risk mitigation in financial sectors?
 5.	What percentage gain can firms benefit monetarily from a secured claim process and risk analysis?
